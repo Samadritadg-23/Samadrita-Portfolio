@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background-color: #ebe9e9;
+        place-items: center;
+        padding-top: 200px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.3);
+        background-color: #ebe9e9;
+        height: 200px;
+    }
+
+
+    .nav {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+
+
+    }
+
+    .list {
+        list-style-type: none;
+        color: #5b413b;
+        display: inline-block;
+        margin: 0 60px 0 60px;
+        font-size: 25px;
+    }
+
+    .line1 {
+        width: 860px;
+        border: 2px solid #5b413b;
+
+        position: relative;
+        bottom: 80px;
+
+    }
+
+    a:link {
+        color: #50271b;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #50271b;
+    }
+
+    a:hover {
+        color: #b56a59;
+        cursor: pointer;
+    }
+
+
+
+
+    .intro {
+        height: 150px;
+        width: 100vw;
+        position: relative;
+
+
+        background-color: #5b413b;
+
+        color: white;
+        font-size: 80px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300px;
+        font-style: italic;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desc {
+        color: #353535;
+        font-size: 40px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 200px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .hero {
+        .pfp {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            position: relative;
+            top: 90px;
+        }
+
+
+        .circle {
+            height: 430px;
+            width: 430px;
+            border-radius: 50%;
+            border: 3px solid #5b413b;
+            position: relative;
+            bottom: 330px;
+            right: 15px;
+        }
+
+        .name {
+            color: #86594b;
+            font-size: 35px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 200px;
+            font-style: normal;
+            text-align: center;
+            position: relative;
+            bottom: 290px;
+            line-height: 1.2;
+            letter-spacing: 2;
+        }
+
+    }
+
+    .container {
+        height: 640px;
+        width: 980px;
+        background-color: #ae9c98;
+        border-radius: 140px;
+        position: relative;
+        bottom: 180px;
+        box-shadow: 2px 2px 8px black;
+
+    }
+
+    article {
+        color: white;
+        font-size: 50px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        padding: 90px 30px 30px 30px;
+        line-height: 70px;
+
+    }
+
+    p {
+        color: white;
+        font-size: 32px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        padding: 0 60px 0 60px;
+        line-height: 50px;
+
+
+    }
+
+    .connect {
+        height: 100px;
+        width: 100%;
+        background-color: #5b413b;
+        color: white;
+        font-size: 50px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    label {
+        color: #50271b;
+        font-size: 35px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 100px;
+
+    }
+
+    form {
+
+        height: 900px;
+        width: 1000px;
+        position: relative;
+        right: 560px;
+        padding: 70px 0 0 190px;
+    }
+
+    input {
+        background-color: #d4bdb6;
+        border: none;
+        height: 70px;
+        width: 320px;
+        border-radius: 100px;
+        padding: 20px;
+        font-size: 20px;
+        box-shadow: 3px 3px 4px #353535;
+    }
+
+    textarea {
+        background-color: #d4bdb6;
+        border: none;
+        height: 170px;
+        width: 600px;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px;
+        box-shadow: 3px 3px 4px #353535;
+    }
+
+    button {
+        height: 50px;
+        width: 150px;
+        background-color: rgb(255, 255, 255);
+        color: #50271b;
+        border: none;
+        font-size: 26px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 40px;
+        position: relative;
+        left: 800px;
+        top: 70px;
+        box-shadow: 3px 3px 4px #353535;
+
+    }
+
+    
+
+    .line2 {
+        width: 1400px;
+        border: 2px solid #5b413b;
+        margin: 30px 0 0 0;
+        position: relative;
+        bottom: 50px;
+
+    }
+
+    h3 {
+        color: #50271b;
+        font-size: 30px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        position: relative;
+        bottom: 30px;
+
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+    }
+
+    .hero:hover {
+        transform: scale(1.1);
+        transition: 0.4s;
+    }
+
+    span {
+        font-size: 30px;
+        margin: 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 50px;
+
+    }
+
+    #sm {
+        margin: 10px 100px 0 0;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .distance {
+        height: 50px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 200px;
+    }
+
+    .edu {
+        background-color: #866b63;
+        width: 100%;
+        height: 600px;
+        color: white;
+        margin: 0 0 0 0;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+
+    }
+
+    .edu-line {
+        border-left: dashed white;
+        height: 380px;
+        position: relative;
+        right: 130px;
+        top: 95px;
+    }
+
+    .circles-1 {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 520px;
+        right: 8px;
+    }
+
+    .circles-1:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+
+    .circles-2:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+
+    .circles-3:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+
+    .circles-2 {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 385px;
+        right: 8px;
+
+    }
+
+    .circles-3 {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 250px;
+        right: 8px;
+
+    }
+
+    .edu-written {
+        color: white;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        height: 10px;
+
+    }
+
+    .sch1 {
+        position: relative;
+        font-size: 35px;
+        bottom: 490px;
+        left: 340px;
+        font-weight: 600;
+    }
+
+    .date1 {
+        position: relative;
+        font-size: 25px;
+        font-style: italic;
+        bottom: 480px;
+        left: 530px;
+        font-weight: 400;
+    }
+
+    .sch2 {
+        position: relative;
+        font-size: 35px;
+        bottom: 365px;
+        right: 170px;
+        font-weight: 600;
+    }
+
+    .date2 {
+        position: relative;
+        font-size: 25px;
+        font-style: italic;
+        bottom: 350px;
+        right: 30px;
+        font-weight: 400;
+    }
+
+    .sch3 {
+        position: relative;
+        font-size: 35px;
+        bottom: 235px;
+        left: 340px;
+        font-weight: 600;
+    }
+
+    .date3 {
+        position: relative;
+        font-size: 25px;
+        font-style: italic;
+        bottom: 225px;
+        left: 560px;
+        font-weight: 400;
+    }
+
+    .circ {
+        height: 10px;
+    }
+
+    .skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 100px 0;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-style: italic;
+    }
+
+    .box1 {
+        background-color: #b9aaa6;
+        border-radius: 100px;
+        padding: 70px;
+        width: 500px;
+        height: 400px;
+        margin: 50px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        box-shadow: 8px 8px 4px #353535;
+    }
+
+    .box2 {
+        background-color: #b9aaa6;
+        border-radius: 100px;
+        padding: 70px;
+        width: 500px;
+        height: 400px;
+        margin: 50px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        box-shadow: 8px 8px 4px #353535;
+
+    }
+
+    .box3 {
+        background-color: #b9aaa6;
+        border-radius: 100px;
+        padding: 70px;
+        width: 500px;
+        height: 400px;
+        margin: 50px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 28px;
+        line-height: 50px;
+        box-shadow: 8px 8px 4px #353535;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .box1:hover {
+        transform: scale(1.1);
+        transition: transform 0.4s ease;
+    }
+
+    .box2:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .box3:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    button:active {
+        transform: translate(2px, 2px);
+    }
+
+    .mark {
+        margin: 150px 0 20px 0;
+    }
+
+    @media (max-width: 1224px) {
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.3);
+        background-color: #ebe9e9;
+        height: 200px;
+        }
+
+
+        .nav {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: space-evenly;
+        
+        }
+        .list {
+        list-style-type: none;
+        color: #5b413b;
+        display: inline-block;
+        margin: 0 40px 0 40px;
+        font-size: 20px;
+        }
+
+        .intro {
+            height: 150px;
+            width: 100vw;
+            position: relative;
+
+
+            background-color: #5b413b;
+
+            color: white;
+            font-size: 50px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 300px;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .desc {
+        color: #353535;
+        font-size: 38px;
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 200px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 40px;
+        }
+
+
+        .container {
+            height: 480px;
+            width: 650px;
+            background-color: #ae9c98;
+            border-radius: 140px;
+            position: relative;
+            bottom: 180px;
+            box-shadow: 2px 2px 8px black;
+
+        }
+
+        article {
+            color: white;
+            font-size: 30px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: italic;
+            text-align: center;
+            padding: 60px 40px 40px 30px;
+            line-height: 30px;
+
+        }
+
+        p {
+            color: white;
+            font-size: 25px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            padding: 0 20px 0 40px;
+            line-height: 40px;
+
+
+        }
+
+        .education {
+            font-size: 35px !important
+        }
+
+        .connect {
+            height: 100px;
+            max-width: 100%;
+            background-color: #5b413b;
+            color: white;
+            font-size: 40px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        
+
+        form {
+            width: 90vw;
+            right: 0;
+            padding: 30px;
+        }
+
+        button {
+            position: relative;
+            right: 300px;
+            margin-top: 30px;
+        }
+
+        
+
+        h3 {
+            color: #50271b;
+            font-size: 30px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            position: relative;
+            bottom: 30px;
+
+        }
+
+        span {
+            font-size: 20px;
+            margin: 20px;
+        }
+        
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: auto;
+            font-size: 5px;
+
+        }
+
+        #sm {
+            margin: 10px 0 0 0;
+            display: flex;
+            align-items: center;
+            font-size: 5px;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 200px;
+        }
+
+        .edu {
+            background-color: #866b63;
+            width: 100vw;
+            height: 600px;
+            color: white;
+            margin: 0 0 0 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+
+        }
+
+        .edu-line {
+            border-left: dashed white;
+            height: 330px;
+            position: relative;
+            right: 90px;
+            top: 95px;
+        }
+
+        .circles-1 {
+            height: 20px;
+            width: 20px;
+            
+        }
+
+        .circles-2 {
+            height: 20px;
+            width: 20px;
+        }
+
+        .circles-3 {
+            height: 20px;
+            width: 20px;
+        }
+
+
+
+        .sch1 {
+            position: relative;
+            font-size: 23px;
+            bottom: 490px;
+            left: 200px;
+            font-weight: 600;
+        }
+
+        .date1 {
+            position: relative;
+            font-size: 23px;
+            font-style: italic;
+            bottom: 480px;
+            left: 330px;
+            font-weight: 400;
+        }
+
+        .sch2 {
+            position: relative;
+            font-size: 20px;
+            bottom: 365px;
+            right: 130px;
+            font-weight: 600;
+        }
+
+        .date2 {
+            position: relative;
+            font-size: 20px;
+            font-style: italic;
+            bottom: 350px;
+            right: 55px;
+            font-weight: 400;
+        }
+
+        .sch3 {
+            position: relative;
+            font-size: 21px;
+            bottom: 245px;
+            left: 200px;
+            font-weight: 600;
+
+        }
+
+        .date3 {
+            position: relative;
+            font-size: 20px;
+            font-style: italic;
+            bottom: 235px;
+            left: 320px;
+            font-weight: 400;
+        }
+
+        
+
+        .skills {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 100px 0;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-style: italic;
+        }
+
+        .box1 {
+            
+            padding: 70px;
+            width: 500px;
+            height: 400px;
+            margin: 50px;
+            font-size: 30px;
+            
+        }
+
+        .box2 {    
+            padding: 70px;
+            width: 500px;
+            height: 400px;
+            margin: 50px;
+            font-size: 30px;
+        }
+
+        .box3 {
+            padding: 70px;
+            width: 500px;
+            height: 400px;
+            margin: 50px;
+            font-size: 28px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+           
+
+        .mark {
+            margin: 150px 0 20px 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            
+        }
+        button{
+            position: relative;
+            left: 40%
+        }
+        img {
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+        body {
+        background-color: #ebe9e9;
+        place-items: center;
+        padding-top: 100px;
+        place-items: center;
+        }
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.3);
+        background-color: #ebe9e9;
+        height: 100px;
+        }
+
+
+        .nav {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: space-evenly;
+        
+        }
+        .list {
+        list-style-type: none;
+        color: #5b413b;
+        display: inline-block;
+        margin: 0 20px 0 20px;
+        font-size: 10px;
+        }
+
+        .intro {
+            height: 80px;
+            width: 100vw;
+            position: relative;
+            background-color: #5b413b;
+            color: white;
+            font-size: 25px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 300px;
+            font-style: italic;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero {
+            .pfp {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            position: relative;
+            top: 40px;
+            left:15px;
+            }
+
+
+            .circle {
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            border: 3px s olid #5b413b;
+            position: relative;
+            bottom: 175px;
+            left:5px;
+            }
+
+            .name {
+            color: #86594b;
+            font-size: 20px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 200px;
+            font-style: normal;
+            text-align: center;
+            position: relative;
+            bottom: 160px;
+            left:10%;
+            
+            letter-spacing: 2;
+            }
+
+        }
+        .hero{
+            height: 520px;
+        }
+ 
+        .container {
+            height: 220px;
+            width: 260px;
+            background-color: #ae9c98;
+            border-radius: 40px;
+            position: relative;
+            bottom: 180px;
+            box-shadow: 2px 2px 8px black;
+
+        }
+
+        article {
+            color: white;
+            font-size: 11px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: italic;
+            text-align: center;
+            padding: 25px 15px 15px 15px;
+            line-height: 15px;
+
+        }
+
+        p {
+            color: white;
+            font-size: 10px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            padding: 0 15px 10px 15px;
+            line-height: 15px;
+
+
+        }
+
+        .education {
+            font-size: 20px !important
+        }
+
+        .connect {
+            height: 100px;
+            max-width: 100%;
+            background-color: #5b413b;
+            color: white;
+            font-size: 40px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .connect {
+        height: 50px;
+        font-size: 20px;
+        }
+        form{
+            padding: 0 0 0 20px;
+            height: 650px;
+        }
+        label{
+            font-size: 20px;
+            
+        }
+        input{
+            height: 10px !important;
+            width: 240px !important;
+            
+        }
+        textarea{
+            height: 150px;
+            width: 290px !important;
+        }
+
+
+        button {
+            height: 20px;
+            width: 100px;
+            font-size: 10px;
+            text-align: center;
+            position: relative;
+            top:100px;
+            position: relative;
+            left: 800px;
+            bottom: 100px !important;
+            
+        }
+
+        
+
+        h3 {
+            color: #50271b;
+            font-size: 30px;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            position: relative;
+            bottom: 30px;
+
+        }
+
+        span {
+            font-size: 20px;
+            margin: 20px;
+        }
+        
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom:30px;
+            left: auto;
+            font-size: 5px;
+            line-height:1px;
+
+
+        }
+
+        #sm {
+            margin: 10px 0 0 0;
+            display: flex;
+            align-items: center;
+            font-size: 5px;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 200px;
+        }
+
+        .edu {
+            background-color: #866b63;
+            width: 100vw;
+            height: 300px;
+            color: white;
+            margin: 0 0 0 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+
+        }
+
+        .edu-line {
+            border-left: dashed #866b63;
+            height: 180px;
+            position: relative;
+            right: 13%;
+            top:40px
+        }
+
+        .circles-1 {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            right: 5%;
+            bottom:261px;
+            
+        }
+
+        .circles-2 {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            bottom: 202px;
+            left:-4%;
+
+        }
+
+        .circles-3 {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            bottom:142px;
+            left:-3%;
+        }
+
+
+
+        .sch1 {
+            position: relative;
+            font-size: 9.5px;
+            bottom: 230px;
+            left:100px;
+            font-weight: 600;
+        }
+
+        .date1 {
+            position: relative;
+            font-size: 9.5px;
+            font-style: italic;
+            bottom: 225px;
+            left: 160px;
+            font-weight: 400;
+        }
+
+        .sch2 {
+            position: relative;
+            font-size: 9.5px;
+            bottom: 162px;
+            right: 57px;
+            font-weight: 600;
+        }
+
+        .date2 {
+            position: relative;
+            font-size: 9.5px;
+            font-style: italic;
+            bottom: 157px;
+            right: 20px;
+            font-weight: 400;
+        }
+
+        .sch3 {
+            position: relative;
+            font-size: 8.8px;
+            bottom: 90px;
+            left: 97px;
+            font-weight: 600;
+
+        }
+
+        .date3 {
+            position: relative;
+            font-size: 9px;
+            font-style: italic;
+            bottom: 85px;
+            left: 160px;
+            font-weight: 400;
+        }
+
+        
+
+        .skills {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 0 0;
+            font-family: "Newsreader", serif;
+            font-optical-sizing: auto;
+            font-style: italic;
+        }
+        .skill-heading{
+            font-size: 20px !important;
+            margin: 5px !important;
+            
+        }
+        h4{
+            font-size: 20px !important;
+        }
+        .designskills{
+            position: relative;
+            top:5px;
+        }
+
+        .box1 {
+            border-radius: 40px;
+            padding: 20px;
+            width: 300px;
+            height: 220px;
+            margin: 50px;
+            font-size: 20px;
+            
+            
+        }
+        .platformskills{
+            position: relative;
+            top:5px;
+        }
+
+        .box2 {    
+            border-radius: 40px;
+            padding: 20px;
+            width: 300px;
+            height: 220px;
+            margin: 50px;
+            font-size: 20px;
+            
+        }
+        .softskills{
+            position: relative;
+            top:5px;
+
+        }
+
+        .box3 {
+            border-radius: 40px;
+            padding: 20px;
+            width: 300px;
+            height: 220px;
+            margin: 50px;
+            font-size: 18px;
+            
+        }
+        
+
+        input {
+        background-color: #d4bdb6;
+        border: none;
+        height: 70px;
+        width: 320px;
+        border-radius: 100px;
+        padding: 20px;
+        font-size: 20px;
+        box-shadow: 3px 3px 4px #353535;
+        }
+
+        textarea {
+        background-color: #d4bdb6;
+        border: none;
+        height: 170px;
+        width: 600px;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px;
+        box-shadow: 3px 3px 4px #353535;
+        }
+        .line2 {
+        width: 300px;
+        border: 1px solid #50271b;
+        margin: 30px 0 0 0;
+        position: relative;
+        bottom: 50px;
+
+        }
+
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+           
+
+        .mark {
+            margin: 20px 0 20px 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            
+        }
+        
+        img {
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+        }
+    }
+        
+
+        
+    }
+</style>
+
+<body>
+    <nav id="nav">
+        <ul class="nav">
+            <li class="list"><a href="#intro">Home</a></li>
+            <li class="list"><a href="#container">About</a></li>
+            <li class="list"><a href="#education">Education</a></li>
+            <li class="list"><a href="#skills">Skills</a></li>
+            <li class="list"><a href="#connect">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="intro" id="intro">Hi. I am an aspiring content creator</div>
+    <div class="desc">I am passionate about photography, videography,<br>
+        story-telling & video editing </div>
+    <div class="hero">
+        <img class="pfp" id="photo" src="profileimg.png" alt="profileimg">
+        <div class="circle"></div>
+        <h1 class="name">SAMADRITA <br>DUTTA GUPTA</h1>
+    </div>
+    <div class="container" id="container">
+        <article>I’m an aspiring content creator exploring the world through videos and visuals</article>
+        <p>Over the past year, I’ve been diving into video editing, photography, and videography, experimenting with
+            different ways to tell stories that feel real and engaging.<br>
+            I’m just starting out, but I love creating, learning, and sharing along the way. My goal is to grow as a
+            creator while building projects that inspire and connect with people. </p>
+    </div>
+    <div class="edu" id="education">
+        <h4 class="education" style="font-size: 50px; text-shadow: 1px 1px 3px black;">Education</h4>
+        <div class="edu-line"></div>
+    </div>
+    <div class="edu-written">
+        <h5 class="sch1" style="text-shadow: 1px 1px 3px black;">Carmel Junior College, Jamshedpur</h5>
+        <h6 class="date1" style="text-shadow: 1px 1px 3px black;">(2010-2015)</h6>
+        <h5 class="sch2" style="text-shadow: 1px 1px 3px black;">Gyan Bharati School, Delhi</h5>
+        <h6 class="date2" style="text-shadow: 1px 1px 3px black;">(2015-2025)</h6>
+        <h5 class="sch3" style="text-shadow: 1px 1px 3px black;">Scaler School of Technology, Bengaluru</h5>
+        <h6 class="date3" style="text-shadow: 1px 1px 3px black;">(2025-2029)</h6>
+    </div>
+    <div class="circ">
+        <div class="circles-1"></div>
+        <div class="circles-2"></div>
+        <div class="circles-3"></div>
+    </div>
+    <div class="skills" id="skills">
+        <h1 style="color: #604f4b; font-size: 50px; margin: 50px; text-shadow: 1px 1px 0px #353535;" class="skill-heading">SKILLS</h1>
+        <section>
+            <div class="box1">
+                <h4 style="font-size: 35px; position: relative; bottom: 52px;" class="designskills">Design skills</h4>
+                <ul class="box-1list">
+                    <li>Social media post design</li>
+                    <li>Photo/Video Editing</li>
+                    <li>Basic Graphic designing</li>
+                </ul>
+            </div>
+            <div class="box2">
+                <h4 style="font-size: 35px; position: relative; bottom: 52px;" class="platformskills">Platform skills</h4>
+                <ul class="box-2list">
+                    <li>Social media management</li>
+                    <li>Hashtag & trend search</li>
+                    <li>Basic SEO</li>
+                </ul>
+            </div>
+            <div class="box3">
+                <h4 style="font-size: 35px; position: relative; bottom:52px;" class="softskills">Soft skills</h4>
+                <ul class="box-3list">
+                    <li>Communication & Collaboration</li>
+                    <li>Creativity & Problem-Solving</li>
+                    <li>Adaptability & Quick Learning</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="connect" id="connect">
+        <h2>Let's Connect</h2>
+    </div>
+    <form action="https://formspree.io/f/mgvnynew" method="post">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <label>Email Id:</label>
+        <input type="email" name="email">
+        <label>What's this about</label>
+        <textarea></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+    <div class="line2"></div>
+    <h3>Find me online</h3>
+    <footer>
+        <div class="insta" id="sm">
+
+            <img src="https://i.pinimg.com/736x/61/82/4b/61824b0a2a3f80be51358738e2aaa52e.jpg" alt="insta logo">
+            <span>@samadrita.d.g_</span>
+        </div>
+        <div class="linkedin" id="sm">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0_nSBySJkRVx9bvkcR9APpMndfgnFx1hb3kTXbu7lEgeLZr2OGseDS9cs3AMb1ngUdQw&usqp=CAU"
+                alt="linkedin logo">
+            <span>@samadritaduttagupta</span>
+        </div>
+        <div class="youtube" id="sm">
+
+            <img src="https://i.pinimg.com/1200x/f1/bb/3d/f1bb3d29ff198888e47c56816ba11e39.jpg" alt="youtube logo">
+            <span>@SamadritaDuttaGupta</span>
+        </div>
+    </footer>
+    <div class="mark">
+        <span>© 2025 Samadrita • Built with ♥</span>
+
+    </div>
+</body>
+
+</html>
